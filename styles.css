@@ -17,6 +17,7 @@ body {
   height: 3px;
   background-color: #333;
   margin: 5px auto;
+  transition: transform 0.3s ease;
 }
 
 .menu {
@@ -42,6 +43,22 @@ body {
 
 .menu ul li a:hover {
   color: #555;
+}
+
+.menu.open {
+  display: block;
+}
+
+.menu-toggle.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 @media screen and (max-width: 768px) {
